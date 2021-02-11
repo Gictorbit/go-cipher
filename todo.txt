@@ -1,0 +1,3 @@
+add usage function
+add random shift when flag not exists
+add more details to readme
