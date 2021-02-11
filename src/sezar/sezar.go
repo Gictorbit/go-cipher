@@ -5,12 +5,12 @@ import (
 	"unicode"
 )
 
-type Seasar struct {
+type Caesar struct {
 	Text  string
 	Shift int32
 }
 
-func (sezar Seasar) EncodeText() string {
+func (sezar Caesar) EncodeText() string {
 
 	res := ""
 	for _, letter := range sezar.Text {
@@ -30,7 +30,7 @@ func (sezar Seasar) EncodeText() string {
 	return res
 }
 
-func (sezar Seasar) DecodeText() string {
+func (sezar Caesar) DecodeText() string {
 	res := ""
 	for _, letter := range sezar.Text {
 		if unicode.IsUpper(letter) {

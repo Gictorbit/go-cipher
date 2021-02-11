@@ -28,13 +28,13 @@ func main() {
 	switch os.Args[1] {
 	case "encrypt":
 		encrypt.Parse(os.Args[2:])
-		svar := sezar.Seasar{Text: *enText_ptr, Shift: int32(*enShift_ptr)}
-		fmt.Println(svar.EncodeText())
+		caesar := sezar.Caesar{Text: *enText_ptr, Shift: int32(*enShift_ptr)}
+		fmt.Println(caesar.EncodeText())
 
 	case "decrypt":
 		decrypt.Parse(os.Args[2:])
-		svar := sezar.Seasar{Text: *deText_ptr, Shift: int32(*deShift_ptr)}
-		fmt.Println(svar.DecodeText())
+		caesar := sezar.Caesar{Text: *deText_ptr, Shift: int32(*deShift_ptr)}
+		fmt.Println(caesar.DecodeText())
 
 	case "crack":
 		crack.Parse(os.Args[2:])
@@ -47,7 +47,7 @@ func main() {
 
 func bruteForce(decrypted string) {
 	for i := 1; i < 26; i++ {
-		sezar := sezar.Seasar{Text: decrypted, Shift: int32(i)}
+		sezar := sezar.Caesar{Text: decrypted, Shift: int32(i)}
 		fmt.Println(i, sezar.DecodeText())
 	}
 }
