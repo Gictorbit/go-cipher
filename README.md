@@ -1,5 +1,12 @@
 # Gocipher
 Caesar cipher implementation written in go
+### Download
+
+[Windows amd64](https://github.com/Gictorbit/go-cipher/raw/master/bin/caesar-cipher-windows-amd64.exe) 
+
+[MacOs amd64](https://github.com/Gictorbit/go-cipher/raw/master/bin/caesar-cipher-darwin-amd64) 
+
+[Linux amd64](https://github.com/Gictorbit/go-cipher/raw/master/bin/caesar-cipher-linux-amd64)
 
 ## example
 ```bash
@@ -9,7 +16,7 @@ Caesar cipher implementation written in go
 
 ./sezarapp crack -txt="Wtaad Ldgas"
 ```
-## make
+## Build
 build for linux
 ```
 make build
@@ -18,3 +25,4 @@ Compile for most common operating systems
 ```
 make compile
 ```
+
